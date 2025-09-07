@@ -2,21 +2,23 @@
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
+  padding-top: 80px;  /* Space for fixed navbar */
   line-height: 1.6;
   background: #f5f7fa;
   color: #333;
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
   background: #1a73e8;
   color: white;
   padding: 15px 0;
-  position: fixed;        /* keeps navbar fixed */
-  top: 0;                 /* stick to top */
-  width: 100%;            /* span full width */
-  z-index: 1000;          /* ensure it stays above content */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* subtle shadow for separation */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .navbar .container {
@@ -57,7 +59,7 @@ body {
 .container {
   max-width: 1000px;
   margin: 30px auto;
-  padding: 80px 20px 0; /* extra top padding to avoid overlap with fixed navbar */
+  padding: 0 20px;
 }
 
 h1 {
@@ -76,8 +78,8 @@ h3 {
   color: #1565c0;
 }
 
-/* Section Cards */
-.card {
+/* Section Card Styling */
+section {
   background: white;
   padding: 20px;
   margin-bottom: 30px;
@@ -125,13 +127,3 @@ figcaption {
   font-size: 0.9em;
   line-height: 1.4;
 }
-
-/* Footer */
-footer {
-  background: #1a73e8;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-}
-
