@@ -1,3 +1,7 @@
 title: Term Deposit Marketing Campaign Insight
 description: Marketing campaign analysis using dashboards and Machine Learning
 theme: minima
+
+# Tell Jekyll to include CSS
+include:
+  - style.css
