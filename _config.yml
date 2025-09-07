@@ -1,6 +1,8 @@
-title: 
-description: Marketing campaign analysis using dashboards and Machine Learning
-theme: time-machine
+remote_theme: pages-themes/time-machine@v0.2.0
+plugins:
+  - jekyll-remote-theme
+title:    # Optional, but useful
+description: Marketing Campaign Insight   # Optional
 
 # Tell Jekyll to include CSS
 include:
