@@ -87,7 +87,7 @@ section {
   margin-bottom: 30px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  scroll-margin-top: 70px; /* Ensure title is visible when linked */
+  scroll-margin-top: 100px; /* Ensure title is visible when linked */
 }
 
 /* Tables */
