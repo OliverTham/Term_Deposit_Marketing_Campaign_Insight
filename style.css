@@ -1,45 +1,115 @@
+/* General */
 body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
   line-height: 1.6;
-  background: #fafafa;
+  background: #f5f7fa;
   color: #333;
 }
 
-h1, h2, h3 {
-  color: #1a73e8;
+/* Navbar */
+.navbar {
+  background: #1a73e8;
+  color: white;
+  padding: 15px 0;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.navbar .nav-links a:hover {
+  text-decoration: underline;
 }
 
+/* Main Content */
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
 h1 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  color: #1a73e8;
+}
+h2 {
+  color: #0d47a1;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+}
+h3 {
+  color: #1565c0;
 }
 
-section {
-  margin-bottom: 40px;
+/* Section Cards */
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Tables */
 table {
   border-collapse: collapse;
   width: 100%;
   margin: 20px 0;
 }
-
 table, th, td {
   border: 1px solid #ccc;
-  padding: 8px;
+  padding: 10px;
+  text-align: left;
 }
-
 th {
-  background: #f4f4f4;
+  background: #f0f4f8;
 }
 
+/* Figures */
+figure {
+  margin: 20px 0;
+}
+figure img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 8px;
+}
+figcaption {
+  font-size: 0.85em;
+  color: #555;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* References */
 .reference-list {
   font-size: 0.9em;
   line-height: 1.4;
 }
 
-ul {
-  margin: 10px 0;
-  padding-left: 20px;
+/* Footer */
+footer {
+  background: #1a73e8;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
 }
