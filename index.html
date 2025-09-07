@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -5,7 +6,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  <!-- Fixed Navigation Bar -->
   <header class="navbar">
     <div class="container">
       <h1 class="logo">Bank A - Term Deposit Campaign</h1>
@@ -26,76 +28,97 @@
   <main class="container">
     <h1>Term Deposit Marketing Campaign</h1>
 
-    <section id="executive-summary" class="card">
+    <section id="executive-summary">
       <h2>Executive Summary</h2>
       <p>
-        Bank A’s marketing campaign, conducted primarily through phone calls, sought to increase subscriptions...
+        Bank A’s marketing campaign, conducted primarily through phone calls, sought to increase subscriptions to its term deposits. 
+        Overall, customer demographics, financial standing, and the quality of campaign interactions strongly influence subscription rates.
       </p>
-      <figure>
-        <img src="images/1.Overview.png" alt="Data Insights">
-        <figcaption>Figure 1: Overview</figcaption>
+      <p>Analysis of the dataset revealed the following key insights:</p>
+
+      <figure style="margin:20px; max-width:600px; text-align:left;">
+        <img src="images/1.Overview.png" alt="Data Insights" style="width:100%; display:block;">
+        <figcaption style="font-size:0.9em; color:#555; margin-top:8px;">Figure 1: Overview</figcaption>
       </figure>
+
       <ul>
-        <li>Subscriber Composition: Only 11.52%...</li>
-        <li>Demographics: Subscriptions are concentrated...</li>
-        <li>Occupational Profile: Managers, technicians...</li>
+        <li>Subscriber Composition: Only 11.52% of customers subscribed, showing strong untapped potential.</li>
+        <li>Demographics: Subscriptions are concentrated in the 30–40 age group, who also hold higher average yearly balances. Clients under 30 show low subscription rates.</li>
+        <li>Occupational Profile: Managers, technicians, and blue-collar workers are the main subscriber groups, suggesting campaign tailoring to specific work environments.</li>
+        <li>Campaign Effectiveness: Longer calls reduce the need for follow-ups, highlighting the importance of quality over quantity in customer engagement.</li>
+        <li>Clustering Insights: K-means clustering identified promising customer segments, particularly blue-collar and technician workers with secondary education and clients aged 38–43.</li>
+        <li>Predictive Analytics: Decision trees and regression models showed that call duration, prior campaign outcomes, and occupation are the strongest predictors of subscription likelihood.</li>
+        <li>Prescriptive Analytics: Monte Carlo simulation suggests that optimizing parameters such as call duration, campaign frequency, and personalized incentives can maximize expected subscriptions.</li>
       </ul>
     </section>
 
-    <section id="introduction" class="card">
+    <section id="introduction">
       <h2>Introduction</h2>
-      <p>
-        Bank A conducted a phone-based marketing campaign...
-      </p>
+      <p>Bank A conducted a phone-based marketing campaign to promote its term deposit products.</p>
+      <p>The dataset contains:</p>
       <ul>
-        <li>Demographics: age, marital status...</li>
-        <li>Bank-related data: financial information...</li>
-        <li>Campaign interaction details...</li>
+        <li>Demographics: age, marital status, employment status, etc.</li>
+        <li>Bank-related data: client financial and account information.</li>
+        <li>Campaign interaction details: call duration, number of calls per client.</li>
+        <li>Outcome: whether the client subscribed to the term deposit.</li>
       </ul>
+      <p>This dataset enables analysis of client characteristics, campaign effectiveness, and factors influencing subscription decisions.</p>
     </section>
 
-    <!-- Keep other sections wrapped in class="card" for a corporate styled report -->
-    
-    <section id="dataset-summary" class="card">
+    <section>
+      <h2>Situation</h2>
+      <p>The marketing campaign mainly via phone calls aimed to boost term deposit subscriptions but resulted in varied outcomes.</p>
+    </section>
+
+    <section>
+      <h2>Complication</h2>
+      <p>
+        Success rate of the existing phone call approach is uncertain. Various investment options such as cryptocurrency, stock market, annuity plan, etc 
+        make the bank exercise more campaigns to attract customers to consider term deposits.
+      </p>
+    </section>
+
+    <section>
+      <h2>Business Problem</h2>
+      <p>What customer characteristics / segments contribute to a higher likelihood of subscribing to term deposits?</p>
+      <p>
+        Variables include demographic (age, marital status, and occupation), bank information (bank balance, housing loans, and personal loans), and campaign information (duration of calls, number of calls, and previous campaign outcomes).
+      </p>
+      <p>
+        Assumptions include that customer demographic and financial standing remain unchanged, the external market environment stays stable, and no disruptive events such as crises or new competitors occur during the forecast period.
+      </p>
+    </section>
+
+    <section id="dataset-summary">
       <h2>Dataset Summary</h2>
+      <p>Key variables in the dataset:</p>
       <table>
         <tr><th>Field</th><th>Type</th><th>Description</th></tr>
         <tr><td>age</td><td>Ratio</td><td>Current age</td></tr>
         <tr><td>job</td><td>Nominal</td><td>Occupation</td></tr>
-        <!-- ... more rows ... -->
+        <tr><td>marital</td><td>Nominal</td><td>Marital status</td></tr>
+        <tr><td>education</td><td>Ordinal</td><td>Education level</td></tr>
+        <tr><td>balance</td><td>Ratio</td><td>Average yearly balance</td></tr>
+        <tr><td>housing</td><td>Nominal</td><td>Housing loan</td></tr>
+        <tr><td>personal</td><td>Nominal</td><td>Personal loan</td></tr>
+        <tr><td>contact</td><td>Nominal</td><td>Channel of contact</td></tr>
+        <tr><td>duration</td><td>Ratio</td><td>Duration of last contact</td></tr>
+        <tr><td>campaign</td><td>Ratio</td><td>No. of contacts in current campaign</td></tr>
+        <tr><td>previous</td><td>Ratio</td><td>No. of contacts prior to campaign</td></tr>
+        <tr><td>poutcome</td><td>Nominal</td><td>Previous campaign outcome</td></tr>
+        <tr><td>deposit</td><td>Nominal</td><td>Subscribed to deposit (Yes/No)</td></tr>
       </table>
-      <figcaption>Figure 2: Dataset</figcaption>
+      <figcaption style="font-size:0.9em; color:#555; margin-top:8px;">Figure 2: Dataset</figcaption>
     </section>
 
-    <section id="dashboard" class="card">
+    <section id="dashboard">
       <h2>Dashboard Visualisation via PowerBI</h2>
-      <figure>
-        <img src="images/3.Dashboard.png" alt="Dashboard">
-        <figcaption>Figure 3: Dashboard</figcaption>
-      </figure>
+      <img src="images/3.Dashboard.png" alt="Dashboard" style="width:100%; max-width:600px; display:block; margin:20px; text-align:left;">
+      <figcaption style="font-size:0.9em; color:#555; margin-top:8px;">Figure 3: Dashboard</figcaption>
     </section>
 
-    <section id="recommendations" class="card">
-      <h2>Recommendations & Next Steps</h2>
-      <h3>1. Targeted Campaigns</h3>
-      <ul>
-        <li>Focus on 30–43 age group with higher balances.</li>
-        <li>Tailor marketing approaches for managers...</li>
-      </ul>
-    </section>
+    <!-- Keep all other sections as-is (Visual Insights, Business Analytics Solution, Recommendations, References) -->
 
-    <section id="references" class="card">
-      <h2>References</h2>
-      <div class="reference-list">
-        <p>Banu, S. (2023)...</p>
-        <p>Businesswire (2023)...</p>
-      </div>
-    </section>
   </main>
-
-  <footer>
-    <p>© 2025 Bank A. All rights reserved.</p>
-  </footer>
 </body>
 </html>
-
